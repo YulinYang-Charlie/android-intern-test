@@ -31,7 +31,7 @@ public class Data extends AsyncTask<Void,Void,Void> {
     public static String[] original = new String[5000];
     public static String[] summary = new String[5000];
     String[] links = new String[5000];
-    private int size;
+
 
 
     @Override
@@ -67,8 +67,7 @@ public class Data extends AsyncTask<Void,Void,Void> {
                 original[i] = images.getString("original");
                 summary[i] = JO.getString("summary");
                 links[i] = JO.getJSONObject("_links").getJSONObject("self").getString("href");
-//                System.out.println(medium[i]);
-                size = i;
+
 
             }
 
@@ -93,9 +92,7 @@ public class Data extends AsyncTask<Void,Void,Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-//        MainActivity.data.setText(this.data);
-//        MainActivity.summary = summary;
-//        MainActivity.size = size;
+
 
     }
 }

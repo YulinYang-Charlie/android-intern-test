@@ -12,20 +12,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
+
 
 public class internAdapter extends RecyclerView.Adapter<internAdapter.internViewHolder> {
-//    String[] medium;
-//    String[] original;
-//    String[] summary;
-    int size;
+
 
     public internAdapter(){
-//        this.summary = summary;
-//        System.out.println(summary[0]);
-//        this.size = size;
+
     }
 
     @Override
