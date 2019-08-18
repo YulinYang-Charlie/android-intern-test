@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 //    public static TextView data;
 //    public static String[] summary;
+    public static int size = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
         Data process = new Data();
         process.execute();
+        while(Data.summary.length == 0){
+
+        }
+
+
         RecyclerView internlist = findViewById(R.id.internlist);
 
         internlist.setLayoutManager(new LinearLayoutManager(this));
-        internlist.setAdapter(new internAdapter());
+
+
+
+        internlist.setAdapter(new internAdapter(size));
+
+
+
 //        data = (TextView) findViewById(R.id.data);
 
 

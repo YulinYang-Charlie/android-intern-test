@@ -20,17 +20,18 @@ public class Data extends AsyncTask<Void,Void,Void> {
 
     int[] id = new int[5000] ;
     String[] url = new String[5000];
-    String[] name = new String[5000];
+    public static String[] name = new String[5000];
     int[] season = new int[5000];
     int[] number = new int[5000];
     String[] airdate = new String[5000];
     String[] airtime = new String[5000];
     String[] airstamp = new String[5000];
     int[] runtime = new int[5000];
-    String[] medium = new String[5000];
-    String[] original = new String[5000];
+    public static String[] medium = new String[5000];
+    public static String[] original = new String[5000];
     public static String[] summary = new String[5000];
     String[] links = new String[5000];
+    private int size;
 
 
     @Override
@@ -66,7 +67,13 @@ public class Data extends AsyncTask<Void,Void,Void> {
                 original[i] = images.getString("original");
                 summary[i] = JO.getString("summary");
                 links[i] = JO.getJSONObject("_links").getJSONObject("self").getString("href");
+//                System.out.println(medium[i]);
+                size = i;
+
             }
+
+
+
 
 
 
@@ -88,5 +95,7 @@ public class Data extends AsyncTask<Void,Void,Void> {
         super.onPostExecute(aVoid);
 //        MainActivity.data.setText(this.data);
 //        MainActivity.summary = summary;
+        MainActivity.size = size;
+
     }
 }
