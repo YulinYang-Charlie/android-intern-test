@@ -29,8 +29,9 @@ public class Data extends AsyncTask<Void,Void,Void> {
     int[] runtime = new int[5000];
     String[] medium = new String[5000];
     String[] original = new String[5000];
-    String[] summary = new String[5000];
+    public static String[] summary = new String[5000];
     String[] links = new String[5000];
+
 
     @Override
     protected Void doInBackground(Void... voids) {
@@ -65,8 +66,8 @@ public class Data extends AsyncTask<Void,Void,Void> {
                 original[i] = images.getString("original");
                 summary[i] = JO.getString("summary");
                 links[i] = JO.getJSONObject("_links").getJSONObject("self").getString("href");
-
             }
+
 
 
 
@@ -85,6 +86,7 @@ public class Data extends AsyncTask<Void,Void,Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        MainActivity.data.setText(this.data);
+//        MainActivity.data.setText(this.data);
+//        MainActivity.summary = summary;
     }
 }

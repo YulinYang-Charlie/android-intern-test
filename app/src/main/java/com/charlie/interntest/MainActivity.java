@@ -2,12 +2,15 @@ package com.charlie.interntest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    public static TextView data;
+//    public static TextView data;
+//    public static String[] summary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +18,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
+
+
         Data process = new Data();
         process.execute();
+        RecyclerView internlist = findViewById(R.id.internlist);
 
-        data = (TextView) findViewById(R.id.data);
+        internlist.setLayoutManager(new LinearLayoutManager(this));
+        internlist.setAdapter(new internAdapter());
+//        data = (TextView) findViewById(R.id.data);
 
 
 
