@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 //    public static TextView data;
 //    public static String[] summary;
-    public static int size = 0;
+//    public static int size = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        internlist.setAdapter(new internAdapter(size));
+        internlist.setAdapter(new internAdapter());
 
 
 

@@ -95,7 +95,7 @@ public class Data extends AsyncTask<Void,Void,Void> {
         super.onPostExecute(aVoid);
 //        MainActivity.data.setText(this.data);
 //        MainActivity.summary = summary;
-        MainActivity.size = size;
+//        MainActivity.size = size;
 
     }
 }

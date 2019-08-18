@@ -22,10 +22,10 @@ public class internAdapter extends RecyclerView.Adapter<internAdapter.internView
 //    String[] summary;
     int size;
 
-    public internAdapter(int size){
+    public internAdapter(){
 //        this.summary = summary;
 //        System.out.println(summary[0]);
-        this.size = size;
+//        this.size = size;
     }
 
     @Override
@@ -37,7 +37,7 @@ public class internAdapter extends RecyclerView.Adapter<internAdapter.internView
 
     @Override
     public void onBindViewHolder(internViewHolder holder, int position) {
-        while(Data.summary[position]!= null){
+        while(Data.summary[position]== null){
 
         }
         String medium1 = Data.medium[position];
