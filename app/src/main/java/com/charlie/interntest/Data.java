@@ -67,8 +67,6 @@ public class Data extends AsyncTask<Void,Void,Void> {
                 original[i] = images.getString("original");
                 summary[i] = JO.getString("summary").replaceAll("<p>","").replaceAll("</p>", "");
                 links[i] = JO.getJSONObject("_links").getJSONObject("self").getString("href");
-
-
             }
 
 

@@ -28,7 +28,7 @@ public class DetailActivity extends AppCompatActivity {
                 + "\nNumber: " + Data.number[position]
                 + "\nAirDate: " + Data.airdate[position] + "\nAirTime: " + Data.airtime[position]
                 + "\nAirstamp: " + Data.airstamp[position] + "\nRunTime: " + Data.runtime[position]
-                + "\nSummary: " + Data.summary[position];
+                + "\nSummary: " + Data.summary[position] + "\n \n Click to see the website";
         text.setText(detail);
 
 

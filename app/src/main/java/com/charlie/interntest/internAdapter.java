@@ -37,7 +37,8 @@ public class internAdapter extends RecyclerView.Adapter<internAdapter.internView
         Glide.with(holder.image.getContext()).load(medium1).into(holder.image);
 
         String summary1 = Data.summary[position];
-        holder.summary.setText("Name: " + Data.name[position] + "\n" + summary1);
+        holder.summary.setText("Name: " + Data.name[position] + "\n" + summary1
+                               + "\n \nClick to see more details");
 
 
 
