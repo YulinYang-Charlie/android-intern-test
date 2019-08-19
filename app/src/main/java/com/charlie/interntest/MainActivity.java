@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        internlist.setAdapter(new internAdapter());
+        internlist.setAdapter(new internAdapter(this));
 
 
 

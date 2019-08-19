@@ -18,19 +18,19 @@ public class Data extends AsyncTask<Void,Void,Void> {
 
     String data = "";
 
-    int[] id = new int[5000] ;
-    String[] url = new String[5000];
+    public static int[] id = new int[5000] ;
+    public static String[] url = new String[5000];
     public static String[] name = new String[5000];
-    int[] season = new int[5000];
-    int[] number = new int[5000];
-    String[] airdate = new String[5000];
-    String[] airtime = new String[5000];
-    String[] airstamp = new String[5000];
-    int[] runtime = new int[5000];
+    public static int[] season = new int[5000];
+    public static int[] number = new int[5000];
+    public static String[] airdate = new String[5000];
+    public static String[] airtime = new String[5000];
+    public static String[] airstamp = new String[5000];
+    public static int[] runtime = new int[5000];
     public static String[] medium = new String[5000];
     public static String[] original = new String[5000];
     public static String[] summary = new String[5000];
-    String[] links = new String[5000];
+    public static String[] links = new String[5000];
 
 
 
@@ -65,7 +65,7 @@ public class Data extends AsyncTask<Void,Void,Void> {
                 images = JO.getJSONObject("image");
                 medium[i] = images.getString("medium");
                 original[i] = images.getString("original");
-                summary[i] = JO.getString("summary");
+                summary[i] = JO.getString("summary").replaceAll("<p>","").replaceAll("</p>", "");
                 links[i] = JO.getJSONObject("_links").getJSONObject("self").getString("href");
 
 
