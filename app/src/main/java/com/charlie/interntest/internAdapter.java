@@ -38,7 +38,7 @@ public class internAdapter extends RecyclerView.Adapter<internAdapter.internView
 
         String summary1 = Data.summary[position];
         holder.summary.setText("Name: " + Data.name[position] + "\n" + summary1
-                               + "\n \nClick to see more details");
+                               + "\n \nClick to see more details.");
 
 
 
