@@ -1,22 +1,25 @@
 package com.charlie.interntest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
+public class DetailActivity extends AppCompatActivity {
 
     ImageView original;
     TextView text;
     int position;
-    private WebView webView;
+    Button button;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_detail);
 
         original = findViewById(R.id.original);
+        button = findViewById(R.id.button);
         text = findViewById(R.id.detail);
         position = getIntent().getIntExtra("position", 00);
         Glide.with(original).load(Data.original[position]).into(original);
@@ -36,11 +40,23 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         text.setText(detail);
 
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, Web.class);
+                intent.putExtra("url", Data.url[position]);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 
-    @Override
-    public void onClick(View v) {
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(Data.url[position]);
-    }
+
+
+
+
+
+
 }

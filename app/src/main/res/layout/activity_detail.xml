@@ -15,6 +15,12 @@
         android:textSize="14sp"
         android:visibility="visible" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:text="Click to see the website"/>
+
     <ImageView
         android:id="@+id/original"
         android:layout_width="wrap_content"
