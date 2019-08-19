@@ -40,10 +40,6 @@ public class internAdapter extends RecyclerView.Adapter<internAdapter.internView
         holder.summary.setText("Name: " + Data.name[position] + "\n" + summary1
                                + "\n \nClick to see more details.");
 
-
-
-
-
     }
 
     @Override
@@ -72,8 +68,6 @@ public class internAdapter extends RecyclerView.Adapter<internAdapter.internView
             Intent intent = new Intent(ctx, DetailActivity.class);
             intent.putExtra("position", position);
             this.ctx.startActivity(intent);
-
-
         }
     }
 }

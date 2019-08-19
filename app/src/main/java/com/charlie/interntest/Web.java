@@ -20,10 +20,5 @@ public class Web extends AppCompatActivity {
         webView = findViewById(R.id.Web1);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(url);
-
-
-
-
-
     }
 }
